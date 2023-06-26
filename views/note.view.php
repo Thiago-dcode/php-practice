@@ -11,7 +11,7 @@
 <?php require('partials/header.php') ?>
 <main>
   <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-    <a style="color: blue; text-decoration:underline;" href="/notes">Go Back...</a>
+    <a class="text-blue-500 hover:underline" href="/notes">Go Back...</a>
     <h1><?= $note['body'] ?></h1>
   </div>
 </main>

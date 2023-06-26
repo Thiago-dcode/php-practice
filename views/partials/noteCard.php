@@ -1,7 +1,8 @@
-<li>
-    <a href=<?= "/note?id={$note['id']}" ?>>
+<li class="border-2 bg-gray-500 text-slate-300 p-4">
+    <a class="text-blue-400 hover:underline" href=<?= "/note?id={$note['id']}" ?>>
         <?= $note['body'] ?>
     </a>
+    <div class="flex gap-1 ">
     <h2>Author:</h2>
     <?php foreach ($users as $user) : ?>
 
@@ -9,4 +10,5 @@
             <h4><?= $user['name'] ?></h4>
         <?php endif; ?>
     <?php endforeach; ?>
+    </div>
 </li>

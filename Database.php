@@ -23,6 +23,7 @@ class Database
 
         return $this;
     }
+    
     public function all()
     {
 
@@ -48,5 +49,9 @@ class Database
         $data =  $this->statement->fetch();
         if (!$data) abort(Response::NOT_FOUND);
         return $data;
+    }
+    public function getLastId(){
+
+       return $this->db->lastInsertId();
     }
 }

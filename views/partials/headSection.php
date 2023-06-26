@@ -18,7 +18,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-full py-14">
+<body class="h-full ">
 
   <!--
   This example requires updating your template:

@@ -2,10 +2,11 @@
 
 
 
-return [
+return $routes = [
     '/' =>  'controllers/index.php',
     '/about' => 'controllers/about.php',
     '/notes' => 'controllers/notes.php',
     '/note' => 'controllers/note.php',
+    '/notes/create' => 'controllers/createNote.php',
     '/contact' =>  'controllers/contact.php',
 ];

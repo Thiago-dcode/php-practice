@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/navController.php') ?>
 
-<nav class="fixed bg-gray-800 top-0 w-full">
+<nav class=" bg-gray-800  w-full">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center">
