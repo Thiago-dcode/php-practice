@@ -1,12 +1,21 @@
 <?php
 require './routes.php';
 
+function callFunClass($class, $func, $params = []){
 
+    $instance = new $class;
+    call_user_func_array([$instance, $func], $params);
+ 
+ 
+ }
 function routeToController($uri, $routes)
 {
     if (array_key_exists($uri, $routes)) {
-
-        require $routes[$uri];
+      
+        [$method,$class,$func ]= $routes[$uri];
+         
+         callFunClass($class,$func);
+         
     } else {
 
         abort();
