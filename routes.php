@@ -10,3 +10,4 @@ return $routes = [
     '/notes/create' => 'controllers/createNote.php',
     '/contact' =>  'controllers/contact.php',
 ];
+
