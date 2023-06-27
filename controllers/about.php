@@ -1,5 +1,17 @@
 <?php
 
-$title = 'My web: About us';
-$headerTitle = 'About us';
-require "./views/about.view.php";
+
+
+
+class About {
+
+
+    public function index(){
+
+        $title = 'About';
+        $headerTitle = 'About page';
+        require "./views/about.view.php";
+
+    }
+
+}
