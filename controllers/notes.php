@@ -46,6 +46,13 @@ class Notes
         $headerTitle = 'Note';
         require('./views/note.view.php');
     }
+    public function edit()
+    {
+
+        $title = 'New Note';
+        $headerTitle = 'Create Note page';
+        require './views/createNote.view.php';
+    }
     public function create()
     {
 
@@ -54,8 +61,22 @@ class Notes
         $query = "INSERT INTO notes (body, user_id) VALUES (?, ?)";
 
         $lastId = $this->db->query($query, [$note, 1])->getLastId();
-
+        $this->db->close();
         header("Location: http://localhost:8888/note?id={$lastId}", TRUE, 301);
+
+        exit();
+    }
+    public function destroy()
+    {
+
+        $noteId = $_POST['id'];
+        
+
+        $query = "DELETE FROM notes where id = ?";
+
+        $this->db->query($query, [$noteId]);
+        $this->db->close();
+        header("Location: http://localhost:8888/notes", TRUE, 301);
 
         exit();
     }

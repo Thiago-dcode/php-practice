@@ -54,4 +54,8 @@ class Database
 
        return $this->db->lastInsertId();
     }
+    public function close(){
+
+        $this->db = null;
+    }
 }
