@@ -55,22 +55,36 @@ class Notes
     }
     public function create()
     {
-
+        require './Validator.php';
+        
+        $error  = [];
         $note = $_POST['note'];
 
-        $query = "INSERT INTO notes (body, user_id) VALUES (?, ?)";
+        if (!isset($note)) {
+            $error['body'] = 'Something went wrong, try again';
+        }
+        if(!Validator::string($note,3,250)){
 
-        $lastId = $this->db->query($query, [$note, 1])->getLastId();
-        $this->db->close();
-        header("Location: http://localhost:8888/note?id={$lastId}", TRUE, 301);
+            $error['body'] = 'A note must have a lenght between 3 and 1000 characters';
+        }
+     
+      
+        if (empty($error)) {
 
-        exit();
+            $query = "INSERT INTO notes (body, user_id) VALUES (?, ?)";
+
+            $lastId = $this->db->query($query, [$note, 1])->getLastId();
+            $this->db->close();
+            header("Location: http://localhost:8888/note?id={$lastId}", TRUE, 301);
+            exit();
+        }
+        require './views/createNote.view.php';
     }
     public function destroy()
     {
 
         $noteId = $_POST['id'];
-        
+
 
         $query = "DELETE FROM notes where id = ?";
 
