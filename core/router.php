@@ -1,4 +1,6 @@
 <?php
+require basePath('routes.php');
+
 
 
 function callFunClass($class, $func, $params = [])
@@ -34,6 +36,6 @@ if (isset($_POST['_method']) && $_POST['_method'] === 'delete') {
 
     $method = 'DELETE';
 }
-require './routes.php';
+
 
 routeToController($method, $uri, $routes);

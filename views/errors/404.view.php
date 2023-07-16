@@ -1,12 +1,11 @@
 
-
 <!-- HEAD -->
 
-<?php require('partials/headSection.php') ?>
+<?php require basePath('views/partials/headSection.php') ?>
 
 <!-- NAV BAR -->
 
-<?php require('partials/nav.php') ?>
+<?php require basePath('views/partials/nav.php') ?>
 
 <!-- Header  -->
 
@@ -18,4 +17,5 @@
 </main>
 <!-- FOOTER -->
 
-<?php require('partials/footer.php') ?>
+
+<?php require basePath('views/partials/footer.php') ?>

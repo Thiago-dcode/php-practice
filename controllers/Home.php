@@ -1,15 +1,16 @@
 <?php
 
 
-class Home {
+class Home
+{
 
 
-    public function index(){
+    public function index()
+    {
 
-        $title = 'Home';
-        $headerTitle = 'Home page';
-        require "./views/index.view.php";
-
+        view('index', [
+            'title' => 'Home',
+            'headerTitle' => 'Home page'
+        ]);
     }
-
 }

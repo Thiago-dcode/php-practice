@@ -1,14 +1,14 @@
 <!-- HEAD -->
 
-<?php require('partials/headSection.php') ?>
+<?php require basePath('views/partials/headSection.php') ?>
 
 <!-- NAV BAR -->
 
-<?php require('partials/nav.php') ?>
+<?php require basePath('views/partials/nav.php') ?>
 
 <!-- Header  -->
 
-<?php require('partials/header.php') ?>
+<?php require basePath('views/partials/header.php') ?>
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <form method="post" class="flex flex-col justify-center items-center gap-3" action="/notes">
@@ -30,4 +30,4 @@
 </main>
 <!-- FOOTER -->
 
-<?php require('partials/footer.php') ?>
+<?php require basePath('views/partials/footer.php') ?>

@@ -8,9 +8,11 @@ class About {
 
     public function index(){
 
-        $title = 'About';
-        $headerTitle = 'About page';
-        require "./views/about.view.php";
+        view('about/index', [
+            'title' => 'About',
+            'headerTitle' => 'About page'
+        ]);
+    
 
     }
 

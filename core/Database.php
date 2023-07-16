@@ -1,5 +1,8 @@
 <?php
 
+
+namespace Core;
+
 class Database
 {
     private $db;
@@ -9,8 +12,8 @@ class Database
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
-        $this->db = new PDO($dsn, $user, $password, [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        $this->db = new \PDO($dsn, $user, $password, [
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
         ]);
     }
 

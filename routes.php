@@ -1,9 +1,9 @@
 <?php
 
-require 'controllers/Home.php';
-require 'controllers/About.php';
-require 'controllers/Notes.php';
-require 'controllers/Contact.php';
+require basePath('controllers/Home.php');
+require basePath('controllers/About.php');
+require basePath('controllers/Contact.php');
+require basePath('controllers/Notes.php');
 
 
 return $routes = [

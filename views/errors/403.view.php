@@ -2,13 +2,12 @@
 
 <!-- HEAD -->
 
-<?php require('partials/headSection.php') ?>
+<?php require basePath('views/partials/headSection.php') ?>
 
 <!-- NAV BAR -->
 
-<?php require('partials/nav.php') ?>
+<?php require basePath('views/partials/nav.php') ?>
 
-<!-- Header  -->
 
 <main>
   <div class="flex flex-col justify-center items-center h-screen py-6 sm:px-6 lg:px-8">
@@ -18,4 +17,5 @@
 </main>
 <!-- FOOTER -->
 
-<?php require('partials/footer.php') ?>
+
+<?php require basePath('views/partials/footer.php') ?>
