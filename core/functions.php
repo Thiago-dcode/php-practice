@@ -2,6 +2,8 @@
 
 use Core\Response;
 
+
+
 function abort($code = 404)
 {
     $path = basePath("views/errors/{$code}.view.php");
@@ -67,15 +69,10 @@ function basePath($path = '')
 
     return __DIR__ .'\..\\'. "\\$path";
 }
-function view($view, $params = [])
-{
-    extract($params);
 
-    require basePath('views/') . $view . '.view.php';
-}
 function component($partial, $params = [])
 {
     extract($params);
 
-     require basePath('views/partials/') . $partial . '.php';
+    require basePath('views/partials/') . $partial . '.php';
 }

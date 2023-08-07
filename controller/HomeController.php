@@ -1,16 +1,20 @@
 <?php
+namespace Controller;
 
+use core\View;
 
-class Home
+class HomeController
 {
 
 
     public function index()
     {
 
-        view('index', [
+
+        View::render('index', [
             'title' => 'Home',
             'headerTitle' => 'Home page'
         ]);
+       
     }
 }

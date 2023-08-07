@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Validator
 {
 
@@ -9,9 +11,9 @@ class Validator
         $value = trim($str);
         return strlen($value) >= $min && strlen($value) <= $max;
     }
-    public static function email($email){
+    public static function email($email)
+    {
 
-       return filter_var($email,FILTER_VALIDATE_EMAIL);
-
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 }

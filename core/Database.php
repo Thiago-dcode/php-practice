@@ -26,7 +26,7 @@ class Database
 
         return $this;
     }
-    
+
     public function all()
     {
 
@@ -53,11 +53,13 @@ class Database
         if (!$data) abort(Response::NOT_FOUND);
         return $data;
     }
-    public function getLastId(){
+    public function getLastId()
+    {
 
-       return $this->db->lastInsertId();
+        return $this->db->lastInsertId();
     }
-    public function close(){
+    public function close()
+    {
 
         $this->db = null;
     }

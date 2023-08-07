@@ -1,12 +1,13 @@
 <?php
-
-class Contact
+namespace Controller;
+use core\View;
+class ContactController
 {
 
     public function index()
     {
 
-        view('contact/index', [
+        View::render('contact/index', [
             'title' => 'About',
             'headerTitle' => 'About page'
         ]);

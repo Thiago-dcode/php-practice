@@ -1,14 +1,14 @@
 <?php
 
 
-
-
-class About {
+namespace Controller;
+use core\View;
+class AboutController {
 
 
     public function index(){
 
-        view('about/index', [
+        View::render('about/index', [
             'title' => 'About',
             'headerTitle' => 'About page'
         ]);
